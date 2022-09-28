@@ -1,10 +1,10 @@
-import tech.antibytes.gradle.project.dependency.Dependency
-import tech.antibytes.gradle.project.dependency.addCustomRepositories
+import io.bitpogo.gradle.rustkmp.dependency.Dependency
+import io.bitpogo.gradle.rustkmp.dependency.addCustomRepositories
 
 plugins {
     `kotlin-dsl`
 
-    id("tech.antibytes.gradle.project.dependency")
+    id("io.bitpogo.gradle.rustkmp.dependency")
 }
 
 repositories {
@@ -29,4 +29,5 @@ dependencies {
     implementation(Dependency.gradle.sqldelight)
     implementation(Dependency.gradle.hilt)
     implementation(Dependency.gradle.kmock)
+    implementation(Dependency.gradle.rustAndroid)
 }

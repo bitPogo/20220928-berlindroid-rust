@@ -6,11 +6,11 @@ pluginManagement {
     }
 }
 
-includeBuild("gradlePlugin/template-dependency")
+includeBuild("gradlePlugin/rust-kmp-dependency")
 
 include(
-    ":kmp-lib",
-    ":example-android-application"
+    ":bigint",
+    ":app-android"
 )
 
 buildCache {
@@ -21,4 +21,4 @@ buildCache {
     }
 }
 
-rootProject.name = "template-project"
+rootProject.name = "rust-kmp"
