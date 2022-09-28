@@ -1,17 +1,17 @@
+import io.bitpogo.gradle.rustkmp.dependency.addCustomRepositories
+import io.bitpogo.gradle.rustkmp.dependency.ensureKotlinVersion
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 import tech.antibytes.gradle.dependency.Version
-import tech.antibytes.gradle.project.dependency.addCustomRepositories
-import tech.antibytes.gradle.project.dependency.ensureKotlinVersion
 
 plugins {
-    id("tech.antibytes.gradle.project.dependency")
+    id("io.bitpogo.gradle.rustkmp.dependency")
 
     id("tech.antibytes.gradle.dependency")
 
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
 
-    id("tech.antibytes.gradle.project.script.quality-spotless")
+    id("io.bitpogo.gradle.rustkmp.script.quality-spotless")
 }
 
 allprojects {

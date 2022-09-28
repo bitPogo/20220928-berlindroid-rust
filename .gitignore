@@ -26,6 +26,7 @@ example-android-app/
 
 #  Rust Builds
 bigint/rsrc/target/
+bigint/rsrc/pkg/
 
 # generated
 

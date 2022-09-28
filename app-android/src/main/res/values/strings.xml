@@ -1,0 +1,36 @@
+<!--
+  ~ Copyright (c) 2022 Matthias Geisler (bitPogo) / All rights reserved.
+  ~
+  ~ Use of this source code is governed by Apache v2.0
+  -->
+
+<resources>
+    <string name="app_name">WikidataMobile</string>
+    <string name="hide_password">hide password</string>
+    <string name="show_password">show password</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_login">Log In</string>
+    <string name="termbox_menu_add_new_entity">Add an entity</string>
+    <string name="termbox_menu_edit">Edit current entity</string>
+    <string name="termbox_menu_refresh">Refresh current entity</string>
+    <string name="termbox_menu_show_more">Show more actions</string>
+    <string name="termbox_menu_show_less">Hide actions</string>
+    <string name="termbox_menu_search_entity">Search for another entity</string>
+    <string name="termbox_menu_random_entity">Select a random entity</string>
+    <string name="termbox_menu_search_language">Select another language</string>
+    <string name="termbox_view_aka">Also known as:</string>
+    <string name="termbox_edit_label">Label</string>
+    <string name="termbox_edit_description">Description</string>
+    <string name="termbox_edit_aka">Aliases</string>
+    <string name="termbox_edit_new_aka">Add a new alias</string>
+    <string name="termbox_edit_cancel">Discard changes</string>
+    <string name="termbox_edit_save">Save changes</string>
+    <string name="termbox_search_placeholder">Your query</string>
+    <string name="termbox_search_search">Apply your query</string>
+    <string name="termbox_missing_label">No label defined</string>
+    <string name="termbox_missing_description">No description defined</string>
+    <string name="termsearch_missing_query">Please enter a query</string>
+    <string name="termsearch_no_results">The given query had no results</string>
+    <string name="language_selector_placeholder">Find a language</string>
+</resources>
