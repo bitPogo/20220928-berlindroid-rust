@@ -15,7 +15,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_add(
     let operator1 = env.convert_byte_array(summand1).unwrap();
     let operator2 = env.convert_byte_array(summand2).unwrap();
 
-    let result = _add(operator1,  operator2);
+    let result = _add(operator1,  operator2).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -30,7 +30,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_subtrac
     let operator1 = env.convert_byte_array(minuend).unwrap();
     let operator2 = env.convert_byte_array(subtrahend).unwrap();
 
-    let result = _subtract(operator1,  operator2);
+    let result = _subtract(operator1,  operator2).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -45,7 +45,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_multipl
     let operator1 = env.convert_byte_array(factor1).unwrap();
     let operator2 = env.convert_byte_array(factor2).unwrap();
 
-    let result = _multiply(operator1,  operator2);
+    let result = _multiply(operator1,  operator2).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -60,7 +60,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_divide(
     let operator1 = env.convert_byte_array(dividend).unwrap();
     let operator2 = env.convert_byte_array(divisor).unwrap();
 
-    let result = _divide(operator1,  operator2);
+    let result = _divide(operator1,  operator2).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -75,7 +75,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_remaind
     let operator1 = env.convert_byte_array(number).unwrap();
     let operator2 = env.convert_byte_array(modulus).unwrap();
 
-    let result = _remainder(operator1,  operator2);
+    let result = _remainder(operator1,  operator2).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -90,7 +90,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_gcd(
     let operator1 = env.convert_byte_array(number).unwrap();
     let operator2 = env.convert_byte_array(modulus).unwrap();
 
-    let result = _gcd(operator1,  operator2);
+    let result = _gcd(operator1,  operator2).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -104,7 +104,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_shiftLe
 ) -> jbyteArray {
     let byteArray = env.convert_byte_array(number).unwrap();
 
-    let result = _shiftLeft(byteArray,  shifts);
+    let result = _shiftLeft(byteArray, shifts).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -118,7 +118,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_shiftRi
 ) -> jbyteArray {
     let byteArray = env.convert_byte_array(number).unwrap();
 
-    let result = _shiftRight(byteArray,  shifts);
+    let result = _shiftRight(byteArray, shifts).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -135,7 +135,7 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_modPow(
     let operator2 = env.convert_byte_array(exponent).unwrap();
     let operator3 = env.convert_byte_array(modulus).unwrap();
 
-    let result = _modPow(operator1, operator2, operator3);
+    let result = _modPow(operator1, operator2, operator3).to_bytes_be();
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }
@@ -150,7 +150,11 @@ pub unsafe extern fn Java_io_bitpogo_rustkmp_bignumber_BigUIntArithmetic_modInve
     let operator1 = env.convert_byte_array(number).unwrap();
     let operator2 = env.convert_byte_array(modulus).unwrap();
 
-    let result = _modInverse(operator1, operator2);
+    let result = match _modInverse(operator1, operator2) {
+        Some(number) => number.to_bytes_be(),
+        None => vec!(),
+    };
+
 
     env.byte_array_from_slice(result.as_slice()).unwrap()
 }

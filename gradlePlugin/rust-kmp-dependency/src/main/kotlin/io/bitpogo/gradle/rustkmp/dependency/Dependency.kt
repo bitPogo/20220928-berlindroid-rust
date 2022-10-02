@@ -10,16 +10,6 @@ object Dependency {
     val gradle = GradlePlugin
     val antibytes = AntiBytes
 
-    val sqldelight = SqlDelight
-
-    object SqlDelight {
-        const val android = "com.squareup.sqldelight:android-driver:${Version.sqldelight}"
-        const val jvm = "com.squareup.sqldelight:sqlite-driver:${Version.sqldelight}"
-        const val js = "com.squareup.sqldelight:sqljs-driver:${Version.sqldelight}"
-        const val native = "com.squareup.sqldelight:native-driver:${Version.sqldelight}"
-        const val coroutines = "com.squareup.sqldelight:coroutines-extensions:${Version.sqldelight}"
-    }
-
     object AntiBytes {
         val test = Test
 
@@ -73,27 +63,8 @@ object Dependency {
     val jvm = Jvm
 
     object Jvm {
-        const val slf4jApi = "org.slf4j:slf4j-api:${Version.Jvm.slf4j}"
-        const val slf4jNop = "org.slf4j:slf4j-nop:${Version.Jvm.slf4j}"
         const val nativeBundler = "org.scijava:native-lib-loader:${Version.jvm.nativeBundler}"
-    }
-
-    val google = Google
-
-    object Google {
-        val hilt = Hilt
-
-        object Hilt {
-            const val core = "com.google.dagger:hilt-android:${Version.Google.hilt}"
-            const val compiler = "com.google.dagger:hilt-compiler:${Version.Google.hilt}"
-            const val composeNavigation = "androidx.hilt:hilt-navigation-compose:${Version.Google.hiltCompose}"
-            const val test = "com.google.dagger:hilt-android-testing:${Version.Google.hilt}"
-        }
-    }
-
-    val androidx = AndroidX
-
-    object AndroidX {
-        const val annotation = "androidx.annotation:annotation:${Version.AndroidX.annotation}"
+        const val slf4jApi = "org.slf4j:slf4j-api:${Version.jvm.slf4j}"
+        const val slf4jNop = "org.slf4j:slf4j-nop:${Version.jvm.slf4j}"
     }
 }

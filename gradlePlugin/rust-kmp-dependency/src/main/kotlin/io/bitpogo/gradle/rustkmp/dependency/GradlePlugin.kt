@@ -6,6 +6,7 @@
 
 package io.bitpogo.gradle.rustkmp.dependency
 
+
 object GradlePlugin {
     const val dependency = "tech.antibytes.gradle-plugins:antibytes-dependency:${Version.Gradle.antibytes}"
     const val serialization = "org.jetbrains.kotlin:kotlin-serialization:${Version.kotlin}"
@@ -15,7 +16,5 @@ object GradlePlugin {
     const val runtimeConfig = "tech.antibytes.gradle-plugins:antibytes-runtime-configuration:${Version.Gradle.antibytes}"
     const val spotless = "com.diffplug.spotless:spotless-plugin-gradle:${Version.Gradle.spotless}"
     const val kmock = "tech.antibytes.kmock:kmock-gradle:${Version.Antibytes.kmock}"
-    const val sqldelight = "com.squareup.sqldelight:gradle-plugin:${Version.sqldelight}"
-    const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Version.Google.hilt}"
     const val rustAndroid = "org.mozilla.rust-android-gradle:plugin:${Version.Gradle.rust}"
 }

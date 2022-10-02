@@ -9,6 +9,7 @@ package io.bitpogo.rustkmp.bignumber
 import io.bitpogo.rustkmp.bignumber.BigUIntegerContract.BigUIntArithmetic
 import io.bitpogo.rustkmp.bignumber.BigUIntegerContract.BigUInteger
 import io.bitpogo.rustkmp.bignumber.BigUIntegerContract.PRIME_INIT_ERROR
+import io.bitpogo.rustkmp.bignumber.BigUIntegerContract.SIGNED_NUMBER_ERROR
 import java.math.BigInteger
 import java.security.SecureRandom
 
@@ -21,7 +22,7 @@ actual class BigUIntegerFactory internal actual constructor(
 
     private fun validateString(number: String) {
         if (!number.first().isDigit()) {
-            throw IllegalArgumentException(BigUIntegerContract.SIGNED_NUMBER_ERROR)
+            throw IllegalArgumentException(SIGNED_NUMBER_ERROR)
         }
     }
 
@@ -35,9 +36,7 @@ actual class BigUIntegerFactory internal actual constructor(
         )
     }
 
-    actual override fun from(
-        number: UInt,
-    ): BigUInteger = from(number.toString())
+    actual override fun from(number: UInt): BigUInteger = from(number.toString())
 
     @OptIn(ExperimentalUnsignedTypes::class)
     actual override fun from(
