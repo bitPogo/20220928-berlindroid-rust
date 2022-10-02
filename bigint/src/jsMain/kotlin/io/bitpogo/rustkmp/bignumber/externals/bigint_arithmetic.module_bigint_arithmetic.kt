@@ -1,3 +1,4 @@
+/* ktlint-disable filename */
 /*
  * Copyright (c) 2022 Matthias Geisler (bitPogo) / All rights reserved.
  *
@@ -6,16 +7,23 @@
 
 @file:JsModule("bigint_arithmetic")
 @file:JsNonModule
-@file:Suppress("INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS",
-    "INLINE_CLASS_IN_EXTERNAL_DECLARATION_WARNING"
+@file:Suppress(
+    "INTERFACE_WITH_SUPERCLASS",
+    "OVERRIDING_FINAL_MEMBER",
+    "RETURN_TYPE_MISMATCH_ON_OVERRIDE",
+    "CONFLICTING_OVERLOADS",
+    "INLINE_CLASS_IN_EXTERNAL_DECLARATION_WARNING",
 )
 
 package io.bitpogo.rustkmp.bignumber.externals
 
-import kotlin.js.*
-import org.khronos.webgl.*
-import org.w3c.dom.url.*
-import org.w3c.fetch.*
+import kotlin.js.Promise
+import org.khronos.webgl.ArrayBuffer
+import org.khronos.webgl.ArrayBufferView
+import org.khronos.webgl.Uint8Array
+import org.w3c.dom.url.URL
+import org.w3c.fetch.Request
+import org.w3c.fetch.Response
 
 external fun add(summand1: Uint8Array, summand2: Uint8Array): Uint8Array
 

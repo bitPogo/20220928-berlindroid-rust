@@ -41,7 +41,9 @@ object BigUIntegerContract {
             modulus: BigUInteger,
         ): BigUInteger
 
-        @OptIn(ExperimentalUnsignedTypes::class)
+        suspend fun asString(): String
+        suspend fun equalsTo(other: Any?): Boolean
+        fun toUint8Array(): Uint8Array
         fun toUByteArray(): UByteArray
         fun toByteArray(): ByteArray
     }

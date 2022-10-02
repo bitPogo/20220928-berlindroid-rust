@@ -6,7 +6,6 @@
 
 package io.bitpogo.gradle.rustkmp.dependency
 
-
 object GradlePlugin {
     const val dependency = "tech.antibytes.gradle-plugins:antibytes-dependency:${Version.Gradle.antibytes}"
     const val serialization = "org.jetbrains.kotlin:kotlin-serialization:${Version.kotlin}"

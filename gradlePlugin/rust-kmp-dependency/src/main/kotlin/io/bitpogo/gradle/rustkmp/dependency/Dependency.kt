@@ -67,4 +67,16 @@ object Dependency {
         const val slf4jApi = "org.slf4j:slf4j-api:${Version.jvm.slf4j}"
         const val slf4jNop = "org.slf4j:slf4j-nop:${Version.jvm.slf4j}"
     }
+
+    val js = Js
+
+    object Js {
+        val kotlinWrapper = KotlinWrapper
+
+        object KotlinWrapper {
+            const val bom = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:${Version.js.kotlinWrappers}"
+            const val react = "org.jetbrains.kotlin-wrappers:kotlin-react"
+            const val reactDom = "org.jetbrains.kotlin-wrappers:kotlin-react-dom"
+        }
+    }
 }

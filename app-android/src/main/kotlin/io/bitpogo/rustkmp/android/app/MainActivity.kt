@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                         value = number1.value,
                         onChange = { new ->
                             viewModel.setNumber1(new)
-                        }
+                        },
                     )
                     Divider(modifier = Modifier.height(5.dp))
                     SingleLineEditableText(
@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                         value = number2.value,
                         onChange = { new ->
                             viewModel.setNumber2(new)
-                        }
+                        },
                     )
                     Divider(modifier = Modifier.height(5.dp))
                     SingleLineEditableText(
@@ -53,12 +53,12 @@ class MainActivity : ComponentActivity() {
                         value = operator.value.toString(),
                         onChange = { new ->
                             viewModel.setOperator(new)
-                        }
+                        },
                     )
                     Divider(modifier = Modifier.height(5.dp))
                     SimpleButton(
                         label = "Calculate!",
-                        onClick = viewModel::calculate
+                        onClick = viewModel::calculate,
                     )
                     Divider(modifier = Modifier.height(5.dp))
                     Text("Result: ${result.value}")
