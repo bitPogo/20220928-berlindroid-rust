@@ -32,6 +32,7 @@
     <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_toString_is_called_it_returns_the_value_of_the_given_Number()</ID>
     <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_toUByteArray_is_called_it_returns_the_wrapped_ByteArray_as_a_UByteArray()</ID>
     <ID>FunctionNaming:SimpleButton.kt$@Composable fun SimpleButton( label: String, fontSize: TextUnit = 16.sp, onClick: () -&gt; Unit, )</ID>
+    <ID>FunctionNaming:SimpleText.kt$fun SimpleTextProps()</ID>
     <ID>FunctionNaming:SingleLineEditableText.kt$@Composable fun SingleLineEditableText( label: String, value: String, onChange: (String) -&gt; Unit, isError: Boolean = false, underlineIndicator: Boolean = false, keyboardOptions: KeyboardOptions = KeyboardOptions.Default, )</ID>
     <ID>FunctionNaming:Theme.kt$@Composable fun RustKmpTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -&gt; Unit)</ID>
     <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: ArrayBuffer = definedExternally</ID>
@@ -86,7 +87,6 @@
     <ID>MaxLineLength:Dependency.kt$Dependency.AntiBytes.Test.JsTest$const val annotations = "tech.antibytes.test-utils-kmp:test-utils-annotations-js:${Version.Antibytes.test}"</ID>
     <ID>MaxLineLength:Dependency.kt$Dependency.AntiBytes.Test.JvmTest$const val annotations = "tech.antibytes.test-utils-kmp:test-utils-annotations-jvm:${Version.Antibytes.test}"</ID>
     <ID>MaxLineLength:GradlePlugin.kt$GradlePlugin$const val runtimeConfig = "tech.antibytes.gradle-plugins:antibytes-runtime-configuration:${Version.Gradle.antibytes}"</ID>
-    <ID>MaxLineLength:bigint_arithmetic.module_bigint_arithmetic.kt$@</ID>
     <ID>MaxLineLength:bigint_arithmetic.module_bigint_arithmetic.kt$external</ID>
     <ID>MaxLineLength:build.gradle.kts$config = files("$projectDir/detekt/config.yml")</ID>
     <ID>TooGenericExceptionThrown:BigUInteger.kt$BigUInteger$throw RuntimeException(NO_MULTIPLICATIVE_INVERSE)</ID>
@@ -109,10 +109,6 @@
     <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_free: (a: Number, b: Number) -&gt; Unit</ID>
     <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_malloc: (a: Number) -&gt; Number</ID>
     <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_realloc: (a: Number, b: Number, c: Number) -&gt; Number</ID>
-    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import kotlin.js.*</ID>
-    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import org.khronos.webgl.*</ID>
-    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import org.w3c.dom.url.*</ID>
-    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import org.w3c.fetch.*</ID>
     <ID>WildcardImport:build.gradle.kts$import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig.*</ID>
   </CurrentIssues>
 </SmellBaseline>
