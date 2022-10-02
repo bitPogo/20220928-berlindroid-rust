@@ -77,6 +77,7 @@ object Dependency {
             const val bom = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:${Version.js.kotlinWrappers}"
             const val react = "org.jetbrains.kotlin-wrappers:kotlin-react"
             const val reactDom = "org.jetbrains.kotlin-wrappers:kotlin-react-dom"
+            const val extension = "org.jetbrains.kotlin-wrappers:kotlin-extensions"
         }
     }
 }

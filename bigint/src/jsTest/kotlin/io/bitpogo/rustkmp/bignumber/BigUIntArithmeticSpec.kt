@@ -2,7 +2,6 @@ package io.bitpogo.rustkmp.bignumber
 
 import io.bitpogo.rustkmp.bignumber.externals.BigInt
 import kotlin.math.ceil
-import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -103,7 +102,6 @@ class BigUIntArithmeticSpec {
         actual.asBigInt().toString() mustBe "298"
     }
 
-    @Ignore
     @Test
     fun Given_two_numbers_it_detetermines_the_remainder() = runTest {
         // Given
