@@ -1,13 +1,14 @@
 package io.bitpogo.rustkmp.bignumber
 
 import io.bitpogo.rustkmp.bignumber.externals.BigInt
+import kotlin.math.ceil
+import kotlin.test.Ignore
+import kotlin.test.Test
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.khronos.webgl.Uint8Array
 import org.khronos.webgl.get
 import tech.antibytes.util.test.mustBe
-import kotlin.test.Ignore
-import kotlin.test.Test
 
 @OptIn(ExperimentalUnsignedTypes::class, ExperimentalCoroutinesApi::class)
 class BigUIntArithmeticSpec {
@@ -45,7 +46,7 @@ class BigUIntArithmeticSpec {
         // Then
         actual.asBigInt().toString() mustBe "596"
     }
-    
+
     @Test
     fun Given_two_numbers_it_subtracts_them() = runTest {
         // Given
@@ -264,5 +265,17 @@ class BigUIntArithmeticSpec {
 
         // Then
         actual mustBe 0
+    }
+
+    @Test
+    fun Given_getProbablePrime_it_returns_a_prime() = runTest {
+        // Given
+        val size = 42
+
+        // When
+        val actual = BigUIntArithmetic.getProbablePrime(size)
+
+        // Then
+        actual.length mustBe ceil(size.toDouble() / 8)
     }
 }

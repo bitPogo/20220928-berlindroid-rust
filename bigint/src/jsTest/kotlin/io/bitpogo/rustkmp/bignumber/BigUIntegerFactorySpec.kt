@@ -11,14 +11,15 @@ import kotlin.math.abs
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertFailsWith
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.runTest
 import tech.antibytes.kfixture.fixture
 import tech.antibytes.kfixture.kotlinFixture
-import tech.antibytes.kmock.MockShared
+import tech.antibytes.kmock.Mock
 import tech.antibytes.util.test.fulfils
 import tech.antibytes.util.test.mustBe
 
-@MockShared(
-    "concurrent",
+@Mock(
     BigUIntegerContract.BigUIntArithmetic::class,
 )
 class BigUIntegerFactorySpec {
@@ -90,9 +91,10 @@ class BigUIntegerFactorySpec {
         actual fulfils BigUIntegerContract.BigUInteger::class
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     @JsName("fn5")
-    fun Given_getProbablePrime_is_called_with_a_Int_which_is_smaller_then_2_it_fails() {
+    fun Given_getProbablePrime_is_called_with_a_Int_which_is_smaller_then_2_it_fails() = runTest {
         // Then
         val error = assertFailsWith<IllegalArgumentException> {
             // When
@@ -107,9 +109,9 @@ class BigUIntegerFactorySpec {
     fun Given_from_is_called_with_a_String_it_does_not_change_the_bytes() {
         // When
         val factory = BigUIntegerFactory(rechenwerk)
-        val actual = factory.from("298").toUByteArray()
+        val actual = factory.from("298").toByteArray()
 
         // Then
-        actual.contentEquals(arrayOf(1.toUByte(), 42.toUByte()).toUByteArray()) mustBe true
+        actual.contentEquals(arrayOf(1.toByte(), 42.toByte()).toByteArray()) mustBe true
     }
 }

@@ -10,7 +10,8 @@ includeBuild("gradlePlugin/rust-kmp-dependency")
 
 include(
     ":bigint",
-    ":app-android"
+    ":app-android",
+    ":app-js"
 )
 
 buildCache {

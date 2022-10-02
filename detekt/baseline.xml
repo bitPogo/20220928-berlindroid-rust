@@ -4,43 +4,115 @@
   <CurrentIssues>
     <ID>EmptyKtFile:settings.gradle.kts$.settings.gradle.kts</ID>
     <ID>EqualsWithHashCodeExist:BigUInteger.kt$BigUInteger : BigUInteger</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test @JsName("fn0") fun It_fulfils_BigUIntegerFactory()</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test @JsName("fn1") fun Given_from_is_called_with_a_String_it_fails_for_signed_numbers()</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test @JsName("fn1a") fun Given_from_is_called_with_a_String_it_returns_a_BigUInteger()</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test @JsName("fn2") fun Given_from_is_called_with_an_Integer_it_returns_a_BigUInteger()</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test @JsName("fn3") fun Given_from_is_called_with_a_ByteArray_it_returns_a_BigUInteger()</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test @JsName("fn5") fun Given_getProbablePrime_is_called_with_a_Int_which_is_smaller_then_2_it_fails()</ID>
+    <ID>FunctionNaming:BigUIntegerFactorySpec.kt$BigUIntegerFactorySpec$@Test fun Given_from_is_called_with_a_String_it_does_not_change_the_bytes()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_compareTo_is_called_it_returns_a_negative_Integer_if_the_number2_is_larger_than_number2()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_compareTo_is_called_it_returns_a_positive_Integer_if_the_number1_is_larger_than_number2()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_compareTo_is_called_it_returns_zero_if_the_number1_and_number2_have_the_same_value()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_div_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_equals_is_called_it_returns_false_if_the_given_other_has_not_the_same_value()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_equals_is_called_it_returns_true_if_the_given_other_has_the_same_value()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_gcd_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_minus_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_minus_is_called_it_fails_if_the_minuend_is_smaller_than_the_subtrahend()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_modInverse_is_called_it_delegates_the_call_to_the_Rechenwerk_and_fails_if_resulting_ByteArray_isEmpty()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_modInverse_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_modPow_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_plus_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_rem_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_shl_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_shr_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_times_is_called_it_delegates_the_call_to_the_Rechenwerk_and_returns_its_result()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_toByteArray_is_called_it_returns_the_wrapped_ByteArray()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_toString_is_called_it_returns_the_value_of_the_given_Number()</ID>
+    <ID>FunctionNaming:BigUIntegerSpec.kt$BigUIntegerSpec$@Test fun Given_toUByteArray_is_called_it_returns_the_wrapped_ByteArray_as_a_UByteArray()</ID>
+    <ID>FunctionNaming:SimpleButton.kt$@Composable fun SimpleButton( label: String, fontSize: TextUnit = 16.sp, onClick: () -&gt; Unit, )</ID>
+    <ID>FunctionNaming:SingleLineEditableText.kt$@Composable fun SingleLineEditableText( label: String, value: String, onChange: (String) -&gt; Unit, isError: Boolean = false, underlineIndicator: Boolean = false, keyboardOptions: KeyboardOptions = KeyboardOptions.Default, )</ID>
+    <ID>FunctionNaming:Theme.kt$@Composable fun RustKmpTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -&gt; Unit)</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: ArrayBuffer = definedExternally</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: ArrayBufferView = definedExternally</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: Promise&lt;Any /* Request | String | URL | Response | ArrayBufferView | ArrayBuffer | WebAssembly.Module */&gt; = definedExternally</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: Request = definedExternally</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: Response = definedExternally</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: String = definedExternally</ID>
+    <ID>FunctionParameterNaming:bigint_arithmetic.module_bigint_arithmetic.kt$module_or_path: URL = definedExternally</ID>
     <ID>MagicNumber:BigUInteger.kt$BigUInteger$10</ID>
     <ID>MagicNumber:BigUIntegerFactory.kt$BigUIntegerFactory$10</ID>
+    <ID>MagicNumber:BigUIntegerFactory.kt$BigUIntegerFactory$16</ID>
+    <ID>MagicNumber:Color.kt$0xFF000000</ID>
+    <ID>MagicNumber:Color.kt$0xFF00AF89</ID>
+    <ID>MagicNumber:Color.kt$0xFF03DAC5</ID>
+    <ID>MagicNumber:Color.kt$0xFF14866D</ID>
+    <ID>MagicNumber:Color.kt$0xFF1C6665</ID>
+    <ID>MagicNumber:Color.kt$0xFF202122</ID>
+    <ID>MagicNumber:Color.kt$0xFF2A4B8D</ID>
+    <ID>MagicNumber:Color.kt$0xFF3366CC</ID>
+    <ID>MagicNumber:Color.kt$0xFF36C36C</ID>
+    <ID>MagicNumber:Color.kt$0xFF3700B3</ID>
+    <ID>MagicNumber:Color.kt$0xFF404244</ID>
+    <ID>MagicNumber:Color.kt$0xFF447FF5</ID>
+    <ID>MagicNumber:Color.kt$0xFF54595D</ID>
+    <ID>MagicNumber:Color.kt$0xFF6200EE</ID>
+    <ID>MagicNumber:Color.kt$0xFF6B4BA1</ID>
+    <ID>MagicNumber:Color.kt$0xFF72777D</ID>
+    <ID>MagicNumber:Color.kt$0xFFA2A9B1</ID>
+    <ID>MagicNumber:Color.kt$0xFFA55858</ID>
+    <ID>MagicNumber:Color.kt$0xFFB32424</ID>
+    <ID>MagicNumber:Color.kt$0xFFBB86FC</ID>
+    <ID>MagicNumber:Color.kt$0xFFC8CCD1</ID>
+    <ID>MagicNumber:Color.kt$0xFFD33D33</ID>
+    <ID>MagicNumber:Color.kt$0xFFD5FDF4</ID>
+    <ID>MagicNumber:Color.kt$0xFFDFDFDF</ID>
+    <ID>MagicNumber:Color.kt$0xFFEAECF0</ID>
+    <ID>MagicNumber:Color.kt$0xFFEAF3FF</ID>
+    <ID>MagicNumber:Color.kt$0xFFF8F9Fa</ID>
+    <ID>MagicNumber:Color.kt$0xFFFEE7E6</ID>
+    <ID>MagicNumber:Color.kt$0xFFFF4242</ID>
+    <ID>MagicNumber:Color.kt$0xFFFFFFFF</ID>
     <ID>MagicNumber:Dangerfile.df.kts$1000</ID>
     <ID>MagicNumber:Dangerfile.df.kts$20</ID>
     <ID>MagicNumber:Dangerfile.df.kts$2000</ID>
     <ID>MagicNumber:Dangerfile.df.kts$500</ID>
     <ID>MagicNumber:settings.gradle.kts$30</ID>
+    <ID>MatchingDeclarationName:global.module.kt$BigInt</ID>
     <ID>MaxLineLength:Dangerfile.df.kts$val</ID>
     <ID>MaxLineLength:Dependency.kt$Dependency.AntiBytes.Test.AndroidTest$const val annotations = "tech.antibytes.test-utils-kmp:test-utils-annotations-android:${Version.Antibytes.test}"</ID>
     <ID>MaxLineLength:Dependency.kt$Dependency.AntiBytes.Test.AndroidTest$const val coroutine = "tech.antibytes.test-utils-kmp:test-utils-coroutine-android:${Version.Antibytes.test}"</ID>
     <ID>MaxLineLength:Dependency.kt$Dependency.AntiBytes.Test.JsTest$const val annotations = "tech.antibytes.test-utils-kmp:test-utils-annotations-js:${Version.Antibytes.test}"</ID>
     <ID>MaxLineLength:Dependency.kt$Dependency.AntiBytes.Test.JvmTest$const val annotations = "tech.antibytes.test-utils-kmp:test-utils-annotations-jvm:${Version.Antibytes.test}"</ID>
     <ID>MaxLineLength:GradlePlugin.kt$GradlePlugin$const val runtimeConfig = "tech.antibytes.gradle-plugins:antibytes-runtime-configuration:${Version.Gradle.antibytes}"</ID>
+    <ID>MaxLineLength:bigint_arithmetic.module_bigint_arithmetic.kt$@</ID>
+    <ID>MaxLineLength:bigint_arithmetic.module_bigint_arithmetic.kt$external</ID>
     <ID>MaxLineLength:build.gradle.kts$config = files("$projectDir/detekt/config.yml")</ID>
     <ID>TooGenericExceptionThrown:BigUInteger.kt$BigUInteger$throw RuntimeException(NO_MULTIPLICATIVE_INVERSE)</ID>
     <ID>TooManyFunctions:BigUIntArithmetic.kt$BigUIntArithmetic$BigUIntArithmetic</ID>
     <ID>TooManyFunctions:BigUInteger.kt$BigUInteger : BigUInteger</ID>
     <ID>TooManyFunctions:BigUIntegerContract.kt$BigUIntegerContract$BigUIntArithmetic</ID>
     <ID>TooManyFunctions:BigUIntegerContract.kt$BigUIntegerContract$BigUInteger</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val androidAndroidTest by getting { dependencies { implementation(Dependency.jvm.test.junit) implementation(Dependency.android.test.junit) implementation(Dependency.android.test.espressoCore) implementation(Dependency.android.test.uiAutomator) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val androidAndroidTest by getting { dependsOn(androidAndroidTestRelease) }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val androidMain by getting { dependencies { implementation(Dependency.multiplatform.kotlin.android) implementation(Dependency.multiplatform.coroutines.android) implementation(LocalDependency.sqldelight.android) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val androidMain by getting { dependencies { implementation(Dependency.multiplatform.kotlin.android) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val androidTest by getting { dependencies { implementation(Dependency.multiplatform.test.jvm) implementation(Dependency.multiplatform.test.junit) implementation(Dependency.android.test.ktx) implementation(Dependency.android.test.robolectric) implementation(Dependency.android.test.junit) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val androidTest by getting { dependencies { implementation(Dependency.multiplatform.test.jvm) implementation(Dependency.multiplatform.test.junit) implementation(Dependency.android.test.robolectric) } }</ID>
+    <ID>TooManyFunctions:BigUIntegerSpec.kt$BigUIntegerSpec</ID>
+    <ID>TooManyFunctions:bigint_arithmetic.module_bigint_arithmetic.kt$io.bitpogo.rustkmp.bignumber.externals.bigint_arithmetic.module_bigint_arithmetic.kt</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val androidAndroidTest by getting { dependsOn(concurrentTest) dependencies { implementation(Dependency.jvm.test.junit) implementation(Dependency.android.test.junit) implementation(Dependency.android.test.espressoCore) implementation(Dependency.android.test.uiAutomator) } }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val androidAndroidTest by getting { dependsOn(concurrentTest) dependsOn(androidAndroidTestRelease) }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val androidMain by getting { dependsOn(concurrentMain) dependencies { implementation(Dependency.multiplatform.kotlin.android) } }</ID>
     <ID>UnusedPrivateMember:build.gradle.kts$val androidTest by getting { dependsOn(androidTestFixtures) }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val commonMain by getting { dependencies { implementation(Dependency.multiplatform.kotlin.common) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val commonTest by getting { dependencies { implementation(Dependency.multiplatform.test.common) implementation(Dependency.multiplatform.test.annotations) implementation(LocalDependency.antibytes.test.kmp.core) implementation(LocalDependency.antibytes.test.kmp.annotations) implementation(LocalDependency.antibytes.test.kmp.fixture) implementation(LocalDependency.antibytes.test.kmp.kmock) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val iosSimulatorArm64Main by getting { dependsOn(iosMain) }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val iosSimulatorArm64Test by getting { dependsOn(iosTest) }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val jsMain by getting { dependencies { implementation(Dependency.multiplatform.kotlin.js) implementation(Dependency.js.nodejs) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val jsTest by getting { dependencies { implementation(Dependency.multiplatform.test.js) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val jvmMain by getting { dependencies { implementation(Dependency.multiplatform.kotlin.jdk8) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val jvmMain by getting { resources.srcDir("$buildDir/generated/rust/") dependencies { implementation(Dependency.multiplatform.kotlin.jdk8) implementation(LocalDependency.jvm.nativeBundler) implementation(LocalDependency.jvm.slf4jNop) implementation(LocalDependency.jvm.slf4jApi) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val jvmTest by getting { dependencies { dependsOn(commonTest) implementation(Dependency.multiplatform.test.jvm) implementation(Dependency.multiplatform.test.junit) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val jvmTest by getting { dependencies { implementation(Dependency.multiplatform.test.jvm) implementation(Dependency.multiplatform.test.junit) } }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val linuxX64Main by getting { dependsOn(otherMain) }</ID>
-    <ID>UnusedPrivateMember:build.gradle.kts$val linuxX64Test by getting { dependsOn(otherTest) }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val androidTest by getting { dependsOn(concurrentTest) dependencies { implementation(Dependency.multiplatform.test.jvm) implementation(Dependency.multiplatform.test.junit) implementation(Dependency.android.test.robolectric) } }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val jsMain by getting { dependencies { implementation(Dependency.multiplatform.kotlin.js) implementation(Dependency.js.nodejs) implementation(Dependency.multiplatform.coroutines.js) implementation(devNpm("copy-webpack-plugin", "11.0.0")) implementation(npm("bigint_arithmetic", File(wasmRustLib))) } }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val jsTest by getting { dependencies { implementation(Dependency.multiplatform.test.js) implementation(Dependency.multiplatform.test.coroutines) } }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val jvmMain by getting { dependsOn(concurrentMain) resources.srcDir(jvmRustLib) dependencies { implementation(Dependency.multiplatform.kotlin.jdk8) implementation(LocalDependency.jvm.nativeBundler) implementation(LocalDependency.jvm.slf4jNop) implementation(LocalDependency.jvm.slf4jApi) } }</ID>
+    <ID>UnusedPrivateMember:build.gradle.kts$val jvmTest by getting { dependsOn(concurrentTest) dependencies { implementation(Dependency.multiplatform.test.jvm) implementation(Dependency.multiplatform.test.junit) } }</ID>
+    <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_add_to_stack_pointer: (a: Number) -&gt; Number</ID>
+    <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_free: (a: Number, b: Number) -&gt; Unit</ID>
+    <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_malloc: (a: Number) -&gt; Number</ID>
+    <ID>VariableNaming:bigint_arithmetic.module_bigint_arithmetic.kt$InitOutput$var __wbindgen_realloc: (a: Number, b: Number, c: Number) -&gt; Number</ID>
+    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import kotlin.js.*</ID>
+    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import org.khronos.webgl.*</ID>
+    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import org.w3c.dom.url.*</ID>
+    <ID>WildcardImport:bigint_arithmetic.module_bigint_arithmetic.kt$import org.w3c.fetch.*</ID>
+    <ID>WildcardImport:build.gradle.kts$import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig.*</ID>
   </CurrentIssues>
 </SmellBaseline>

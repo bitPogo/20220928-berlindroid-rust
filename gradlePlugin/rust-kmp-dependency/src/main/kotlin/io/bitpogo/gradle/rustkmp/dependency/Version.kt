@@ -43,9 +43,19 @@ object Version {
          * [native library loader](https://search.maven.org/artifact/org.scijava/native-lib-loader/2.4.0/jar)
          */
         const val nativeBundler = "2.4.0"
+
         /**
          * [Log4J](http://www.slf4j.org/)
          */
         const val slf4j = "1.7.36"
+    }
+
+    val js = Js
+
+    object Js {
+        /**
+         * [Kotlin Wrappers](https://github.com/JetBrains/kotlin-wrappers/releases)
+         */
+        const val kotlinWrappers = "1.0.0-pre.396"
     }
 }
