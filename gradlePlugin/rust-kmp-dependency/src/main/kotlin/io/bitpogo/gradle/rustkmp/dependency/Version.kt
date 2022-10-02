@@ -36,45 +36,16 @@ object Version {
         const val kmock = "0.3.0-rc04"
     }
 
-    /**
-     * [SQLDelight](https://github.com/cashapp/sqldelight/)
-     */
-    const val sqldelight = "1.5.3"
-
-    val google = Google
-
-    object Google {
-        /**
-         * [Google Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
-         */
-        const val hilt = "2.38.1"
-
-        /**
-         * [Google Hilt Compose](https://developer.android.com/jetpack/androidx/releases/hilt)
-         */
-        const val hiltCompose = "1.0.0"
-    }
-
-    val androidx = AndroidX
-
-    object AndroidX {
-        /**
-         * [Annotation](https://developer.android.com/jetpack/androidx/releases/annotation)
-         */
-        const val annotation = "1.4.0"
-    }
-
     val jvm = Jvm
 
     object Jvm {
         /**
-         * [Log4J](http://www.slf4j.org/)
-         */
-        const val slf4j = "1.7.36"
-
-        /**
          * [native library loader](https://search.maven.org/artifact/org.scijava/native-lib-loader/2.4.0/jar)
          */
         const val nativeBundler = "2.4.0"
+        /**
+         * [Log4J](http://www.slf4j.org/)
+         */
+        const val slf4j = "1.7.36"
     }
 }

@@ -26,8 +26,6 @@ dependencies {
     implementation(Dependency.gradle.spotless)
     implementation(Dependency.gradle.projectConfig)
     implementation(Dependency.gradle.runtimeConfig)
-    implementation(Dependency.gradle.sqldelight)
-    implementation(Dependency.gradle.hilt)
     implementation(Dependency.gradle.kmock)
     implementation(Dependency.gradle.rustAndroid)
 }

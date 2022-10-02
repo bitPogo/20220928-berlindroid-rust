@@ -12,16 +12,12 @@ import kotlin.test.Test
 import kotlin.test.assertFailsWith
 import tech.antibytes.kfixture.fixture
 import tech.antibytes.kfixture.kotlinFixture
-import tech.antibytes.kmock.MockCommon
+import tech.antibytes.kmock.MockShared
 import tech.antibytes.kmock.verification.assertProxy
-import tech.antibytes.util.test.annotations.IgnoreJs
-import tech.antibytes.util.test.annotations.RobolectricTestRunner
-import tech.antibytes.util.test.annotations.RunWithRobolectricTestRunner
 import tech.antibytes.util.test.mustBe
 
-@IgnoreJs
-@RunWithRobolectricTestRunner(RobolectricTestRunner::class)
-@MockCommon(
+@MockShared(
+    "concurrent",
     BigUIntegerContract.BigUIntArithmetic::class,
 )
 class BigUIntegerSpec {

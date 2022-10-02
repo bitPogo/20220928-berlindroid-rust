@@ -19,14 +19,15 @@ plugins {
 
 val rustDir = "${projectDir.absolutePath.trimEnd('/')}/rsrc"
 val jvmRustLib = "$buildDir/generated/rust/jvm"
-val wasmRustLib = "$buildDir/generated/rust/wasm"
+val wasmRustLib = "$projectDir/wasm"
+val platform = "osx_arm64" // TODO
 
 kotlin {
     android()
 
     jvm()
 
-    /*js(IR) {
+    js(IR) {
         compilations {
             this.forEach {
                 it.compileKotlinTask.kotlinOptions.sourceMap = true
@@ -45,7 +46,7 @@ kotlin {
                 }
             }
         }
-    }*/
+    }
 
     sourceSets {
         all {
@@ -72,20 +73,39 @@ kotlin {
             }
         }
 
+        val concurrentMain by creating {
+            dependsOn(commonMain)
+        }
+
+        val concurrentTest by creating {
+            dependsOn(commonTest)
+        }
+
         val androidMain by getting {
+            dependsOn(concurrentMain)
+
             dependencies {
                 implementation(Dependency.multiplatform.kotlin.android)
             }
         }
         if (!isIdea()) {
-            val androidAndroidTestRelease by getting
-            val androidAndroidTest by getting {
-                dependsOn(androidAndroidTestRelease)
+            val androidAndroidTestRelease by getting {
+                dependsOn(concurrentTest)
             }
-            val androidTestFixturesDebug by getting
-            val androidTestFixturesRelease by getting
+            val androidAndroidTest by getting {
+                dependsOn(concurrentTest)
+                dependsOn(androidAndroidTestRelease)
+
+            }
+            val androidTestFixturesDebug by getting {
+                dependsOn(concurrentTest)
+            }
+            val androidTestFixturesRelease by getting {
+                dependsOn(concurrentTest)
+            }
 
             val androidTestFixtures by getting {
+                dependsOn(concurrentTest)
                 dependsOn(androidTestFixturesDebug)
                 dependsOn(androidTestFixturesRelease)
             }
@@ -95,6 +115,8 @@ kotlin {
             }
         }
         val androidTest by getting {
+            dependsOn(concurrentTest)
+
             dependencies {
                 implementation(Dependency.multiplatform.test.jvm)
                 implementation(Dependency.multiplatform.test.junit)
@@ -103,6 +125,7 @@ kotlin {
         }
 
         val androidAndroidTest by getting {
+            dependsOn(concurrentTest)
             dependencies {
                 implementation(Dependency.jvm.test.junit)
                 implementation(Dependency.android.test.junit)
@@ -112,7 +135,9 @@ kotlin {
         }
 
         val jvmMain by getting {
+            dependsOn(concurrentMain)
             resources.srcDir(jvmRustLib)
+
             dependencies {
                 implementation(Dependency.multiplatform.kotlin.jdk8)
                 implementation(LocalDependency.jvm.nativeBundler)
@@ -121,16 +146,20 @@ kotlin {
             }
         }
         val jvmTest by getting {
+            dependsOn(concurrentTest)
             dependencies {
                 implementation(Dependency.multiplatform.test.jvm)
                 implementation(Dependency.multiplatform.test.junit)
             }
         }
 
-        /*val jsMain by getting {
+        val jsMain by getting {
             dependencies {
                 implementation(Dependency.multiplatform.kotlin.js)
                 implementation(Dependency.js.nodejs)
+                implementation(Dependency.multiplatform.coroutines.js)
+                implementation(devNpm("copy-webpack-plugin", "11.0.0"))
+                implementation(npm("bigint_arithmetic", File(wasmRustLib)))
 
             }
         }
@@ -138,8 +167,9 @@ kotlin {
         val jsTest by getting {
             dependencies {
                 implementation(Dependency.multiplatform.test.js)
+                implementation(Dependency.multiplatform.test.coroutines)
             }
-        }*/
+        }
     }
 }
 
@@ -198,7 +228,7 @@ val cargoJvmBuild by tasks.creating(Sync::class.java) {
 
     from("$rustDir/target/release")
     include("*.dylib","*.so","*.dll")
-    into( "$jvmRustLib/natives/osx_arm64")
+    into( "$jvmRustLib/natives/$platform")
 }
 
 tasks.named("jvmProcessResources") {
@@ -217,7 +247,7 @@ val cargoWasmAssemble by tasks.creating(Exec::class.java) {
         "wasm-pack"
     }
 
-    commandLine(cargo, "build", "--release")
+    commandLine(cargo, "build", "--target", "web")
 }
 
 val cargoWasmBuild by tasks.creating(Sync::class.java) {
@@ -234,7 +264,7 @@ tasks.withType(KotlinCompile::class.java) {
 }
 
 tasks.withType(KotlinJsCompile::class.java) {
-    dependsOn(cargoWasmBuild)
+     dependsOn(cargoWasmBuild)
 }
 
 tasks.named("clean") {

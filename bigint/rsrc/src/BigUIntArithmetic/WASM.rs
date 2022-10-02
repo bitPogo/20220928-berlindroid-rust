@@ -9,161 +9,181 @@
 use wasm_bindgen::prelude::*;
 use crate::BigUIntArithmetic::*;
 use std::str;
+use js_sys::Uint8Array;
 
 #[cfg(feature = "wee_alloc")]
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
+fn wrapResult(result: BigUint) -> Uint8Array {
+    let resultVec = result.to_bytes_be();
+    let resultArray = Uint8Array::new_with_length(resultVec.len().try_into().unwrap());
+    resultArray.copy_from(resultVec.as_slice());
+
+    return resultArray;
+}
+
 #[wasm_bindgen]
 pub fn add(
-    summand1: String,
-    summand2: String
-) -> String {
+    summand1: Uint8Array,
+    summand2: Uint8Array
+) -> Uint8Array {
     let result = _add(
-        summand1.as_bytes().to_vec(),
-        summand2.as_bytes().to_vec(),
+        summand1.to_vec(),
+        summand2.to_vec(),
     );
+    
+    return wrapResult(result);
 
-    str::from_utf8(&result).unwrap().to_string()
 }
 
 #[wasm_bindgen]
 pub fn subtract(
-    minuend: String,
-    subtrahend: String
-) -> String {
+    minuend: Uint8Array,
+    subtrahend: Uint8Array
+) -> Uint8Array {
     let result = _subtract(
-        minuend.as_bytes().to_vec(),
-        subtrahend.as_bytes().to_vec(),
+        minuend.to_vec(),
+        subtrahend.to_vec(),
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn multiply(
-    factor1: String,
-    factor2: String
-) -> String {
+    factor1: Uint8Array,
+    factor2: Uint8Array
+) -> Uint8Array {
     let result = _multiply(
-        factor1.as_bytes().to_vec(),
-        factor2.as_bytes().to_vec(),
+        factor1.to_vec(),
+        factor2.to_vec(),
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn divide(
-    dividend: String,
-    divisor: String
-) -> String {
+    dividend: Uint8Array,
+    divisor: Uint8Array
+) -> Uint8Array {
     let result = _divide(
-        dividend.as_bytes().to_vec(),
-        divisor.as_bytes().to_vec(),
+        dividend.to_vec(),
+        divisor.to_vec(),
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn remainder(
-    number: String,
-    modulus: String
-) -> String {
+    number: Uint8Array,
+    modulus: Uint8Array
+) -> Uint8Array {
     let result = _remainder(
-        number.as_bytes().to_vec(),
-        modulus.as_bytes().to_vec(),
+        number.to_vec(),
+        modulus.to_vec(),
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn gcd(
-    number: String,
-    modulus: String
-) -> String {
+    number: Uint8Array,
+    modulus: Uint8Array
+) -> Uint8Array {
     let result = _gcd(
-        number.as_bytes().to_vec(),
-        modulus.as_bytes().to_vec(),
+        number.to_vec(),
+        modulus.to_vec(),
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn shiftLeft(
-    number: String,
+    number: Uint8Array,
     shifts: i64
-) -> String {
+) -> Uint8Array {
     let result = _shiftLeft(
-        number.as_bytes().to_vec(),
+        number.to_vec(),
         shifts,
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn shiftRight(
-    number: String,
+    number: Uint8Array,
     shifts: i64
-) -> String {
+) -> Uint8Array {
     let result = _shiftRight(
-        number.as_bytes().to_vec(),
+        number.to_vec(),
         shifts,
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn modPow(
-    base: String,
-    exponent: String,
-    modulus: String,
-) -> String {
+    base: Uint8Array,
+    exponent: Uint8Array,
+    modulus: Uint8Array,
+) -> Uint8Array {
     let result = _modPow(
-        base.as_bytes().to_vec(),
-        exponent.as_bytes().to_vec(),
-        modulus.as_bytes().to_vec(),
+        base.to_vec(),
+        exponent.to_vec(),
+        modulus.to_vec(),
     );
-
-    str::from_utf8(&result).unwrap().to_string()
+    
+    return wrapResult(result);
 }
 
 #[wasm_bindgen]
 pub fn modInverse(
-    number: String,
-    modulus: String,
-) -> String {
+    number: Uint8Array,
+    modulus: Uint8Array,
+) -> Uint8Array {
     let result = _modInverse(
-        number.as_bytes().to_vec(),
-        modulus.as_bytes().to_vec(),
+        number.to_vec(),
+        modulus.to_vec(),
     );
 
-    str::from_utf8(&result).unwrap().to_string()
+    return match result {
+        Some(value) => wrapResult(value),
+        None => Uint8Array::new_with_length(0),
+    };
 }
 
 #[wasm_bindgen]
 pub fn intoString(
-    number: String,
+    number: &[u8],
     radix: i32,
 ) -> String {
     _intoString(
-        number.as_bytes().to_vec(),
+        number.to_vec(),
         radix.try_into().unwrap(),
     )
 }
 
 #[wasm_bindgen]
 pub fn compare(
-    number: String,
-    other: String,
+    number: Uint8Array,
+    other: Uint8Array,
 ) -> i32 {
     _compare(
-        number.as_bytes().to_vec(),
-        other.as_bytes().to_vec(),
+        number.to_vec(),
+        other.to_vec(),
     )
+}
+
+#[wasm_bindgen]
+pub fn getProbablePrime(size: i32) -> Uint8Array {
+    let result = _getProbablePrime(size.try_into().unwrap());
+    
+    return wrapResult(result);
 }
